@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>inventories of <%= @venue.name %></h1>
+
+<table>
+  
+
+  <tbody>
+    <% @inventories.each do |invent| %>
+      <tr>
+        <td><%= image_tag invent.image.thumb.url.to_s %> </td>
+        <td><%= invent.name %></td>
+        <td><%= invent.price %></td>
+        <td><%= invent.category %> </td>
+        <td><%= link_to 'Show', :controller => 'inventories', :action => 'show', :id=>@venue.id ,:vd => invent.id%></td>
+       <td> <%= link_to 'Edit', :controller => 'inventories', :action => 'edit',:vd => invent.id%> </td>
+       <td><%= link_to 'Destroy', :controller => 'inventories', :action => 'destroy',:vd => invent.id, method: :delete,data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+ <td><%= link_to 'New', :controller => 'inventories', :action => 'new', :id=> @venue.id %></td>

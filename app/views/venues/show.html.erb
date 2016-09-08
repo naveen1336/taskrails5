@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @venue.name %>
+</p>
+
+<%= link_to 'show_inventory',inventories_path %>
+<%= link_to 'Edit', edit_venue_path(@venue) %> |
+<%= link_to 'Back', venues_path %>

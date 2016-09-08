@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @inventory.image.thumb.url %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @inventory.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @inventory.price %>
+</p>
+<p>
+  <strong>category:</strong>
+  <%= @inventory.category %>
+</p>
+
+ <%= link_to 'Edit', :controller => 'inventories', :action => 'edit',:vd => @inventory.id%>

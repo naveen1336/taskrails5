@@ -1,0 +1,15 @@
+ <%= form_for Inventory.new , url: url_for(:controller => 'inventories', :action => 'update'), :html=> {:method => :put} do |f| %>
+ 
+
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+
+      <%= f.label :price %><br>
+      <%= f.text_field :price %>
+      <%= f.label :category %><br>
+      <%= f.text_field :category %>
+      <%= f.label :image %><br>
+    <%= f.file_field :image %>
+    <br>
+      <%= f.submit "Save changes"%>
+    <% end %>
